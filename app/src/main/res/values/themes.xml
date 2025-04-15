@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.StoreSuper" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/mainColorLight</item>
+        <item name="colorPrimaryVariant">@color/mainColorLight</item>
+        <item name="colorOnPrimary">@color/mainBackgroundLight</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/mainColorLight</item>
+        <item name="colorSecondaryVariant">@color/mainColorLight</item>
+        <item name="colorOnSecondary">@color/mainBackgroundLightSecondary</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorOnPrimary</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <!-- Customize your theme here. -->
+        <item name="android:navigationBarColor">?attr/colorOnPrimary</item>
+
+
+        <item name="android:fontFamily">@font/noto_sans</item>
+
+    </style>
+
+    <style name="Theme.StoreSuper.NavigationBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/mainColorLight</item>
+        <item name="colorOnPrimary">@color/mainBackgroundLight</item>
+
+
+
+    </style>
+
+    <style name="Theme.StoreSuper.BaseBackground" parent="Theme.StoreSuper">
+        <item name="android:background">?attr/colorOnPrimary</item>
+    </style>
+
+    <style name="Theme.StoreSuper.MaterialCardView" parent="Theme.StoreSuper">
+        <item name="cardBackgroundColor">?attr/colorOnSecondary</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="cardElevation">0dp</item>
+
+    </style>
+
+
+
+</resources>
