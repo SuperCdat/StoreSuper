@@ -153,6 +153,18 @@ class OptionsFragment : Fragment() {
             editor.apply()
         }
 
+        root.findViewById<MaterialTextView>(R.id.github).setOnClickListener {
+
+            startActivity(Intent(Intent.ACTION_VIEW, "https://github.com/SuperCdat/StoreSuper/".toUri()));
+
+        }
+
+        root.findViewById<MaterialTextView>(R.id.yt).setOnClickListener {
+
+            startActivity(Intent(Intent.ACTION_VIEW, "https://youtube.com/@supercdat/".toUri()));
+
+        }
+
 
 
         return root

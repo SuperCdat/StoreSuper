@@ -139,6 +139,7 @@
                     android:text="Gần như là bản đầu tiên."
                     android:textSize="14sp" />
 
+
             </LinearLayout>
 
             <ImageView
@@ -152,8 +153,33 @@
 
 
 
+
     </com.google.android.material.card.MaterialCardView>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/github"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textColor="?attr/colorPrimary"
+            android:text="@string/github"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/yt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:textColor="?attr/colorPrimary"
+            android:text="@string/yt"/>
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

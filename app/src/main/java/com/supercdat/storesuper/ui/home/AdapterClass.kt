@@ -66,7 +66,19 @@ class AdapterClass (private val dataList: ArrayList<DataClass>): RecyclerView.Ad
 
                 val install: MaterialButton? = bottomSheetDialog.findViewById(R.id.install)
                 val packageName: String = currentItem.dataPackagename
-                if (isAppInstalled(holder.itemView.context, packageName)) {
+                val installedVersion = getInstalledAppVersion(holder.itemView.context, packageName)
+                if (installedVersion != null && installedVersion != currentItem.dataApplicationversion) {
+                    install?.text = "Cập nhật"
+                    install?.setOnClickListener {
+                        downloadAndInstallAPK(
+                            holder.itemView.context,
+                            currentItem.dataDownloadlink,
+                            currentItem.dataApplicationname + ".apk",
+                            install,
+                            currentItem.dataPackagename
+                        )
+                    }
+                } else if (isAppInstalled(holder.itemView.context, packageName)) {
                     install?.text = "Mở"
                     install?.setOnClickListener {
                         val launchIntent: Intent? = holder.itemView.context.packageManager.getLaunchIntentForPackage(packageName)
@@ -232,5 +244,16 @@ class AdapterClass (private val dataList: ArrayList<DataClass>): RecyclerView.Ad
             false // Package does not exist
         }
     }
+
+    fun getInstalledAppVersion(context: Context, packageName: String): String? {
+        return try {
+            val packageInfo = context.packageManager.getPackageInfo(packageName, 0)
+            packageInfo.versionName
+        } catch (e: PackageManager.NameNotFoundException) {
+            null
+        }
+    }
+
+
 
 }

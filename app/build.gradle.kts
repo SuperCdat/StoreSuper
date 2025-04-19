@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "io.github.supercdat.storesuper"
+    namespace = "com.supercdat.storesuper"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.supercdat.storesuper"
+        applicationId = "io.github.supercdat.storesuper"
         minSdk = 21
         targetSdk = 34
         versionCode = 1
