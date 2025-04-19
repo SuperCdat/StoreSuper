@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.supercdat.storesuper"
+    namespace = "io.github.supercdat.storesuper"
     compileSdk = 35
 
     defaultConfig {
