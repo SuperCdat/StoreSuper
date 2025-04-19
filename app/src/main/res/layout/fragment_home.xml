@@ -7,10 +7,23 @@
     android:orientation="vertical"
     style="@style/Theme.StoreSuper.BaseBackground">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Store Super"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="5dp"
+        android:textColor="@color/mainColorDark"
+        android:textSize="35sp"/>
 
-
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:contentDescription="App List"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 
 </LinearLayout>

@@ -2,49 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.StoreSuper.BaseBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.options.OptionsFragment"
-    style="@style/Theme.StoreSuper.BaseBackground">
+    tools:context=".ui.options.OptionsFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tùy Chọn"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:textSize="33sp"/>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/ManagePermission"
+        style="@style/Theme.StoreSuper.MaterialCardView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        style="@style/Theme.StoreSuper.MaterialCardView"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
         android:clickable="true"
         android:focusable="true"
         android:longClickable="true">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="17.5dp"
+            android:layout_marginRight="17.5dp"
             android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp">
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Manage Permissions"
-                android:textSize="18sp"/>
-
-        </LinearLayout>
-
+            android:layout_marginBottom="15dp"
+            android:text="Quản Lý Quyền"
+            android:textSize="18sp" />
 
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardcustomdarkmode"
+        app:cardBackgroundColor="@color/transparent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
-        style="@style/Theme.StoreSuper.MaterialCardView"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
         android:clickable="true"
         android:focusable="true"
         android:longClickable="true">
@@ -52,30 +57,99 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_margin="20dp">
+            android:orientation="vertical">
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/customdarkmode"
+                android:scaleY=".8"
+                android:scaleX=".8"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="-25dp"
+                android:layout_marginRight="-25dp"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:enabled="false"
+                style="@style/Theme.StoreSuper.MaterialSwitchText"
+                android:text="Chế Độ Tối Cục Bộ"
+                android:textSize="22.5sp" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Store Super 🎉🎉🎉"
-                android:textSize="18sp"/>
-
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Version: 0.0.1"
+                android:id="@+id/customdarkmodedescription"
                 style="@style/Theme.StoreSuper.DescriptionText"
-                android:textSize="13sp"/>
-
-            <com.google.android.material.textview.MaterialTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Demo app. Simple."
-                android:textSize="14sp"/>
+                android:layout_marginTop="-15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:visibility="visible"
+                android:text="Từ Android 10, hãy kích hoạt Chế Độ Tối trong cài đặt thiết bị."
+                android:textSize="10sp" />
 
-       </LinearLayout>
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Theme.StoreSuper.MaterialCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:longClickable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Store Super 🎉🎉🎉"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/Theme.StoreSuper.DescriptionText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phiên Bản: 0.1.0"
+                    android:textSize="13sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Gần như là bản đầu tiên."
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:src="@drawable/wuaze_ingame"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
 
 
     </com.google.android.material.card.MaterialCardView>

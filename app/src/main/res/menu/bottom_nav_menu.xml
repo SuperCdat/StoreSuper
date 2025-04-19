@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/home_selector"
-        android:title="@string/title_home" />
+        android:icon="@drawable/apps_selector"
+        android:title="Ứng Dụng" />
 
     <item
         android:id="@+id/navigation_installed"
         android:icon="@drawable/installed_selector"
-        android:title="Installed" />
+        android:title="Đã Cài Đặt" />
 
     <item
         android:id="@+id/navigation_options"
         android:icon="@drawable/settings_selector"
-        android:title="Options" />
+        android:title="Tùy Chọn" />
 
 </menu>

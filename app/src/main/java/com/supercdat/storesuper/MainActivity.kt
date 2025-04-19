@@ -1,11 +1,15 @@
 package com.supercdat.storesuper
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.SharedPreferences
+import android.os.Build
 import android.os.Bundle
 import android.view.MotionEvent
 import android.view.View
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
@@ -43,10 +47,17 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q) {
 
-
-
+            val sharedPreferences: SharedPreferences =
+                this.getSharedPreferences("Mode", Context.MODE_PRIVATE)
+            val nightMode: Boolean = sharedPreferences.getBoolean("nightMode", false)
+            if (nightMode) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            }
+        }
 
 
     }
+
 }

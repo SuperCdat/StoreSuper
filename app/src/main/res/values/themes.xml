@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.StoreSuper" parent="Theme.Material3.DynamicColors.DayNight.NoActionBar">
+    <style name="Theme.StoreSuper" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/mainColorLight</item>
         <item name="colorPrimaryVariant">@color/mainColorLight</item>
@@ -9,14 +9,20 @@
         <item name="colorSecondary">@color/mainColorLight</item>
         <item name="colorSecondaryVariant">@color/mainColorLight</item>
         <item name="colorOnSecondary">@color/mainBackgroundLightSecondary</item>
+
+        <item name="colorAccent">@color/mainBackgroundLightSecondary</item>
+        <item name="colorOnSurface">@color/mainBackgroundLightSecondary</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorOnPrimary</item>
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
         <!-- Customize your theme here. -->
         <item name="android:navigationBarColor">?attr/colorOnPrimary</item>
-
+        <item name="android:windowLightNavigationBar" tools:targetApi="27">false</item>
 
         <item name="android:fontFamily">@font/noto_sans</item>
+        <item name="android:fontWeight" tools:targetApi="26">1000</item>
+
+        <item name="android:includeFontPadding">false</item>
 
     </style>
 
@@ -36,6 +42,45 @@
         <item name="cardBackgroundColor">?attr/colorOnSecondary</item>
         <item name="strokeWidth">0dp</item>
         <item name="cardElevation">0dp</item>
+
+    </style>
+    <style name="Theme.StoreSuper.MaterialCardViewOutlined" parent="Theme.StoreSuper">
+        <item name="cardBackgroundColor">@color/transparent</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cardElevation">0dp</item>
+
+    </style>
+
+    <style name="Theme.StoreSuper.MaterialSwitchText" parent="Theme.StoreSuper">
+        <item name="android:textColor">@drawable/material_switch_text_colors</item>
+
+    </style>
+
+    <style name="Theme.StoreSuper.MaterialButtonRoundedStart" parent="Theme.StoreSuper">
+        <item name="cornerSizeTopRight">5dp</item>
+        <item name="cornerSizeBottomLeft"></item>
+        <item name="cornerSizeBottomRight">5dp</item>
+
+    </style>
+
+    <style name="Theme.StoreSuper.MaterialButtonRoundedEnd" parent="Theme.StoreSuper">
+        <item name="cornerSizeTopLeft">5dp</item>
+        <item name="cornerSizeBottomLeft">5dp</item>
+        <item name="cornerSizeBottomRight"></item>
+
+    </style>
+
+    <style name="Theme.StoreSuper.MaterialCardViewRoundedBottom" parent="Theme.StoreSuper">
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+
+    </style>
+
+    <style name="Theme.StoreSuper.MaterialRoundedAll" parent="Theme.StoreSuper">
+        <item name="cornerSizeTopLeft"></item>
+        <item name="cornerSizeTopRight"></item>
+        <item name="cornerSizeBottomLeft"></item>
+        <item name="cornerSizeBottomRight"></item>
 
     </style>
 
