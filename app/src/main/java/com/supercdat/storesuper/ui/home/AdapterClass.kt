@@ -40,6 +40,12 @@ class AdapterClass (private val dataList: ArrayList<DataClass>): RecyclerView.Ad
         holder.publisherName.text = "bởi " + currentItem.dataPublishername
         holder.timesDownloaded.text = currentItem.dataTimesdownloaded
 
+        val layoutParams = holder.itemView.layoutParams as ViewGroup.MarginLayoutParams
+        if (position == dataList.size - 1) {
+            layoutParams.bottomMargin = 300
+        }
+        holder.itemView.layoutParams = layoutParams
+
         var opened: Boolean = false
         holder.itemView.setOnClickListener {
             if (!opened) {
